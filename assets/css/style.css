@@ -1,0 +1,38 @@
+.app {
+    background: #f1f1f1;
+    display: grid;  
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-areas: 
+    "cabecalho"
+    "conteudo"
+    "rodape";
+/* Com a propriedade css-template-areas "desenhamos" nosso layout, assim conseguimos informar como e por quais elementos ele vai ser composto:
+
+"header header header": Aqui estamos dizendo que a primeira linha vai ser composta por um header.
+"aside main main": Aqui estamos dizendo que a segunda linha vai ser composta por um aside na esquerda e por um main na esquerda.
+"footer footer footer": Aqui estamos dizendo que a terceira e última linha vai ser composta por um footer.
+Assim conseguimos chegar no layout que nosso amigo estava precisando. */
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto auto;
+}
+
+.cabecalho {
+    align-items: center;
+    display: flex;
+    grid-area: cabecalho;
+    padding: 0 2rem;
+}
+ 
+.conteudo {
+    grid-area: conteudo;
+    padding: 0 2rem;
+}
+
+.rodape {
+    background: #fdfdfd;
+    color: #333333;
+    font-size: 0.8rem;
+    grid-area: rodape;
+    padding: 1rem;
+    text-align: center;
+}
